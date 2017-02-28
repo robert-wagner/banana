@@ -1,8 +1,9 @@
-var currentX = 50;
-var currentY = 50;
+var currentX = 0;
+var currentY = 0;
 function setup() {
   createCanvas(windowWidth,windowHeight);
-
+  currentX = width/2;
+  currentY = height/2;
 }
 
 function draw() {
