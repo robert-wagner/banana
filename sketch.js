@@ -13,6 +13,7 @@ function setup() {
 function draw() {
 
   fill(currentX/width*255,currentY/height*255,128);
+  noStroke();
   ellipse(currentX,currentY,sizeEllipse,sizeEllipse);
   if (foodFlag) {
     if (dist(currentX,currentY,foodX,foodY)<20) {
@@ -36,8 +37,8 @@ function draw() {
   } else {
     foodX = random(0,width);
     foodY = random(0,height);
-    fill(255,255,0);
-    ellipse(foodX,foodY,20,20);
+    //fill(255,255,0);
+    //ellipse(foodX,foodY,20,20);
     foodFlag = 1;
   }
 
