@@ -23,10 +23,14 @@ function draw() {
       if ((dist(currentX,currentY,foodX,foodY)>(height+width)/5)&&(frameCount%7!=0)) {
         currentX = currentX + random(-10,10);
         currentY = currentY + random(-10,10);
+        sizeEllipse -=(1/20);
+        sizeEllipse = constrain(sizeEllipse,50,200);
       }
       else {
         currentX = currentX + random(-10,10) + 5*cos(atan2(foodY-currentY,foodX-currentX));
         currentY = currentY + random(-10,10)+ 5*sin (atan(foodY-currentY,foodX-currentX));
+        sizeEllipse -=(1/20);
+        sizeEllipse = constrain(sizeEllipse,50,200);
       }
     }
   } else {
