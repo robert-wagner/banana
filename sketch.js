@@ -3,6 +3,7 @@ var currentY = 0;
 var foodFlag = 0;
 var foodX = 0;
 var foodY = 0;
+var sizeEllipse = 100;
 function setup() {
   createCanvas(windowWidth,windowHeight);
   currentX = width/2;
@@ -12,13 +13,14 @@ function setup() {
 function draw() {
 
   fill(currentX/width*255,currentY/height*255,128);
-  ellipse(currentX,currentY,100,100);
+  ellipse(currentX,currentY,sizeEllipse,sizeEllipse);
   if (foodFlag) {
     if (dist(currentX,currentY,foodX,foodY)<20) {
       foodFlag = 0;
+      sizeEllipse +=20;
     }
     else {
-      if (dist(currentX,currentY,foodX,foodY)>(height+width)/5) {
+      if ((dist(currentX,currentY,foodX,foodY)>(height+width)/5)&&(frameCount%7!=0)) {
         currentX = currentX + random(-10,10);
         currentY = currentY + random(-10,10);
       }
