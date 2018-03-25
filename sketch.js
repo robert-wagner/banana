@@ -10,7 +10,7 @@ var finalPostions = NaN
 var live = false
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  fill(black)
+  fill(0, 0, 0)
   text("for kjk, Coming Soon")
   //initial banana drawing here
   var currentPositions = initialPositions
